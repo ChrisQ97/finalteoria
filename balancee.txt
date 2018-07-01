@@ -1,0 +1,13 @@
+INSERT INTO cuentasbalance(nombre, saldo)
+values("Caja",5000),("Caja chica",1000),("Bancos",300000),
+,("IVA por cobrar",7500),
+("Mercaderías",10000),("Material de empaque",3000),("Papelería y utiles",3500),
+("Repuestos y accesorios",2000),("Utiles y enseres",2000),
+("Inmuebles",130000),("Mobiliario y equipo",30000),
+("Equipo de computación",8000),("Herramientas",3000),("Gastos de organización",10000),
+("Gastos de instalación",10000),
+("Préstamos bancarios a corto plazo",10000),("IVA por pagar",10000),("Hipotecas a corto plazo",20000),
+("Hipotecas a largo plazo",40000),("Préstamos bancarios a largo plazo",40000),
+
+("Capital",0),("Ganancia neta del ejercicio",0)
+

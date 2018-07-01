@@ -1,0 +1,19 @@
+INSERT INTO cuentasestador(nombre,saldo)
+values("Ventas",250000),("(-) Devoluciones y rebajas sobre ventas",5000),("Mercaderias (Inventario inicial)",40000),
+("(+) Compras",2000),("(+) Gastos sobre compras",1000),("(-) Devoluciones y rebajas sobre compras",1000),
+("(-) Mercaderias (Inventario Final)",1000),
+("Sueldos sala de ventas",36000),("Bonificaciones incentivo sala de ventas",3000),("Seguros vencidos sala de ventas",3000),
+("Depreciación mobiliario y equipo sala de ventas",3000),("Depreciación edificios sala de ventas",2000),("Cuotas patronales sala de ventas",4561.2),
+("Material de empaque consumido",2500),("Aguinaldos sala de ventas",3000),("Bono 14 sala de ventas",3000),
+("Gastos diversos sala de ventas",250),("Sueldos de administración",50000),
+("Bonificaciones incentivo de administración",3000),("Seguros vencidos de oficina",2000),
+("Depreciación mobiliario y equipo de oficina",2000),("Depreciación edificios de oficina",2500),
+("Depreciacion equipo de computación",2000),("Amortización gastos de organización",1000),("Amortización gastos de constitución",1000),
+
+("Cuotas patronales de administración",6335),
+("Aguinaldos de administración",4166.67),("Bono 14 de administración",4166.67),("Papelería y útiles consumidos ",500),("IUSI",1.17),("Intereses pagados",5000),("Gastos diversos de oficina",300)
+
+
+
+INSERT INTO empleados(Nombre,Apellido,Direccion,Telefono,Celular,Sueldo,DPI,Puesto,Inicio,Fin,Usuario,Clave)
+values("Christian","Q","Quetzaltenango","11111111","111111",3500.00,"6546546","Dueño",CURDATE(),CURDATE(),"cq97","1234")
