@@ -156,7 +156,6 @@ public class MostrarLotes extends javax.swing.JFrame {
         Fecha = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
         Validar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         Nuevo1 = new javax.swing.JLabel();
         PUN = new javax.swing.JLabel();
@@ -169,6 +168,7 @@ public class MostrarLotes extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         Editar.setText("Editar");
         Editar.addActionListener(new java.awt.event.ActionListener() {
@@ -180,27 +180,34 @@ public class MostrarLotes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(189, 189, 189));
+        jPanel1.setBackground(new java.awt.Color(17, 111, 172));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(62, 142, 194));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Producto");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Marca");
 
         Nombre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Nombre.setForeground(new java.awt.Color(255, 255, 255));
         Nombre.setText("Nombre");
 
         Marca.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Marca.setForeground(new java.awt.Color(255, 255, 255));
         Marca.setText("jLabel4");
 
         Nombre1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Nombre1.setForeground(new java.awt.Color(255, 255, 255));
         Nombre1.setText("Unidad");
 
         Unidad.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Unidad.setForeground(new java.awt.Color(255, 255, 255));
         Unidad.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -255,6 +262,7 @@ public class MostrarLotes extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        Lote.setColorBackgoundHead(new java.awt.Color(0, 141, 232));
         Lote.setComponentPopupMenu(jPopupMenu1);
         Lote.setFuenteHead(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         Lote.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -266,6 +274,7 @@ public class MostrarLotes extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 1260, 430));
 
+        PanelEditar.setBackground(new java.awt.Color(62, 142, 194));
         PanelEditar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         PanelEditar.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -280,15 +289,18 @@ public class MostrarLotes extends javax.swing.JFrame {
         PanelEditar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Costo Unitario");
         PanelEditar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
 
         NL.setBackground(new java.awt.Color(12, 161, 239));
         NL.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        NL.setForeground(new java.awt.Color(255, 255, 255));
         NL.setText("NO:");
         PanelEditar.add(NL, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Ganancia");
         PanelEditar.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, -1, -1));
 
@@ -326,80 +338,106 @@ public class MostrarLotes extends javax.swing.JFrame {
         PanelEditar.add(Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 138, -1));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Descripcion");
         PanelEditar.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 10, -1, -1));
 
+        Validar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Validar.setForeground(new java.awt.Color(255, 255, 255));
+        Validar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-ok-32.png"))); // NOI18N
         Validar.setText("Validar");
+        Validar.setContentAreaFilled(false);
+        Validar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-de-acuerdo-30.png"))); // NOI18N
         Validar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ValidarActionPerformed(evt);
             }
         });
-        PanelEditar.add(Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 90, -1, -1));
-
-        jButton1.setText("Cancelar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        PanelEditar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, -1, -1));
+        PanelEditar.add(Validar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Cantidad");
         PanelEditar.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
         Nuevo1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Nuevo1.setForeground(new java.awt.Color(255, 255, 255));
         Nuevo1.setText("Nuevo Costo Total");
         PanelEditar.add(Nuevo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, -1, -1));
 
         PUN.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        PUN.setForeground(new java.awt.Color(255, 255, 255));
         PUN.setText("Cantidad");
         PanelEditar.add(PUN, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, -1, -1));
 
         Nuevo3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Nuevo3.setForeground(new java.awt.Color(255, 255, 255));
         Nuevo3.setText("Nuevo Precio Total");
         PanelEditar.add(Nuevo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, -1, -1));
 
         Nuevo2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Nuevo2.setForeground(new java.awt.Color(255, 255, 255));
         Nuevo2.setText("Nuevo Precio Unitario");
         PanelEditar.add(Nuevo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, -1));
 
         PTN.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        PTN.setForeground(new java.awt.Color(255, 255, 255));
         PTN.setText("Cantidad");
         PanelEditar.add(PTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, -1));
 
         CostoN.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        CostoN.setForeground(new java.awt.Color(255, 255, 255));
         CostoN.setText("Cantidad");
         PanelEditar.add(CostoN, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
+        brz.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        brz.setForeground(new java.awt.Color(255, 255, 255));
+        brz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-ok-32.png"))); // NOI18N
         brz.setText("Confirmar");
+        brz.setContentAreaFilled(false);
+        brz.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-de-acuerdo-30.png"))); // NOI18N
         brz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brzActionPerformed(evt);
             }
         });
-        PanelEditar.add(brz, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 130, -1, -1));
+        PanelEditar.add(brz, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 160, 40));
 
         jLabel5.setBackground(new java.awt.Color(12, 161, 239));
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Fecha");
         PanelEditar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
         jLabel8.setBackground(new java.awt.Color(12, 161, 239));
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Modificar");
         PanelEditar.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jLabel10.setBackground(new java.awt.Color(12, 161, 239));
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Lote");
         PanelEditar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         jLabel11.setBackground(new java.awt.Color(12, 161, 239));
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("NO:");
         PanelEditar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-eliminar-50.png"))); // NOI18N
+        jButton1.setText("Cancelar");
+        jButton1.setContentAreaFilled(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-eliminar-filled-50.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PanelEditar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, 50));
 
         jPanel1.add(PanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 880, 180));
 

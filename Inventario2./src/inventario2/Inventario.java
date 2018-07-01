@@ -77,7 +77,7 @@ public class Inventario extends javax.swing.JFrame {
                 TipoE.addItem("Area");
                 TipoE.addItem("Unidades");
         //this.setUndecorated(true);
-        this.setSize(1275, 700);
+        this.setSize(1290, 570);
 
         //this.setDefaultCloseOperation(this.HIDE_ON_CLOSE);
         //
@@ -160,15 +160,12 @@ public class Inventario extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         Inventario = new rojerusan.RSTableMetro();
         P2 = new javax.swing.JRadioButton();
         Todo = new javax.swing.JRadioButton();
         Generar = new javax.swing.JButton();
         LLenar = new rojerusan.RSComboMetro();
-        jLabel5 = new javax.swing.JLabel();
         PanelEditar = new javax.swing.JPanel();
         NO = new javax.swing.JLabel();
         Edit2 = new javax.swing.JLabel();
@@ -182,7 +179,6 @@ public class Inventario extends javax.swing.JFrame {
         TipoE = new javax.swing.JComboBox<>();
         MedidaE = new javax.swing.JComboBox<>();
         jButton3 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         Edit1 = new javax.swing.JLabel();
 
         Editar.setText("Editar");
@@ -201,10 +197,13 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
 
-        Panel.setBackground(new java.awt.Color(189, 189, 189));
+        Panel.setBackground(new java.awt.Color(17, 111, 172));
         Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Act.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Act.setForeground(new java.awt.Color(255, 255, 255));
         Act.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-actualizar-50.png"))); // NOI18N
+        Act.setText("Actualizar");
         Act.setBorderPainted(false);
         Act.setContentAreaFilled(false);
         Act.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-actualizar-filled-50.png"))); // NOI18N
@@ -213,9 +212,12 @@ public class Inventario extends javax.swing.JFrame {
                 ActActionPerformed(evt);
             }
         });
-        Panel.add(Act, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, 40, 42));
+        Panel.add(Act, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 200, 42));
 
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-producto-50.png"))); // NOI18N
+        jButton1.setText("Agregar producto");
         jButton1.setContentAreaFilled(false);
         jButton1.setDefaultCapable(false);
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-producto-filled-50.png"))); // NOI18N
@@ -224,9 +226,12 @@ public class Inventario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        Panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 51, 50));
+        Panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 250, 50));
 
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-volver-asignación-50.png"))); // NOI18N
+        jButton2.setText("Regresar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-volver-asignación-filled-50.png"))); // NOI18N
@@ -235,21 +240,14 @@ public class Inventario extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        Panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 490, 49, -1));
+        Panel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 460, 170, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("INVENTARIO");
-        Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 200, 44));
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setText("Agregar producto");
-        Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setText("Regresar");
-        Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 460, -1, -1));
+        Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 300, 44));
 
         Inventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -262,32 +260,37 @@ public class Inventario extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        Inventario.setColorBackgoundHead(new java.awt.Color(85, 1, 156));
+        Inventario.setColorBackgoundHead(new java.awt.Color(0, 141, 232));
         Inventario.setComponentPopupMenu(Menu);
         jScrollPane2.setViewportView(Inventario);
 
         Panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 1010, 320));
 
+        P2.setForeground(new java.awt.Color(255, 255, 255));
         P2.setText("Producto");
         P2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 P2ActionPerformed(evt);
             }
         });
-        Panel.add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 81, -1, -1));
+        Panel.add(P2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
 
+        Todo.setForeground(new java.awt.Color(255, 255, 255));
         Todo.setText("Todo");
         Todo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TodoActionPerformed(evt);
             }
         });
-        Panel.add(Todo, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 81, -1, -1));
+        Panel.add(Todo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
 
-        Generar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-vuelto-asignación-50.png"))); // NOI18N
+        Generar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Generar.setForeground(new java.awt.Color(255, 255, 255));
+        Generar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-multiedición-50.png"))); // NOI18N
+        Generar.setText("Generar reporte");
         Generar.setBorderPainted(false);
         Generar.setContentAreaFilled(false);
-        Generar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-vuelto-asignación-filled-50.png"))); // NOI18N
+        Generar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-multiedición-filled-50.png"))); // NOI18N
         Generar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GenerarActionPerformed(evt);
@@ -295,9 +298,9 @@ public class Inventario extends javax.swing.JFrame {
         });
         Panel.add(Generar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
 
-        LLenar.setColorArrow(new java.awt.Color(86, 0, 169));
-        LLenar.setColorBorde(new java.awt.Color(86, 0, 169));
-        LLenar.setColorFondo(new java.awt.Color(86, 0, 169));
+        LLenar.setColorArrow(new java.awt.Color(0, 141, 232));
+        LLenar.setColorBorde(new java.awt.Color(0, 141, 232));
+        LLenar.setColorFondo(new java.awt.Color(0, 141, 232));
         LLenar.setFocusCycleRoot(true);
         LLenar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,24 +309,23 @@ public class Inventario extends javax.swing.JFrame {
         });
         Panel.add(LLenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 76, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel5.setText("Actualizar");
-        Panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 460, -1, -1));
-
+        PanelEditar.setBackground(new java.awt.Color(62, 142, 194));
         PanelEditar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         PanelEditar.setLayout(null);
 
-        NO.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        NO.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        NO.setForeground(new java.awt.Color(255, 255, 255));
         NO.setText("Stock");
         PanelEditar.add(NO);
-        NO.setBounds(10, 230, 95, 22);
+        NO.setBounds(10, 220, 95, 17);
 
-        Edit2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Edit2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Edit2.setForeground(new java.awt.Color(255, 255, 255));
         Edit2.setText("Código");
         PanelEditar.add(Edit2);
-        Edit2.setBounds(10, 20, 69, 22);
+        Edit2.setBounds(10, 20, 55, 17);
         PanelEditar.add(CodigoE);
-        CodigoE.setBounds(10, 50, 70, 34);
+        CodigoE.setBounds(10, 40, 80, 30);
 
         ProductoE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,12 +333,13 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
         PanelEditar.add(ProductoE);
-        ProductoE.setBounds(10, 120, 80, 34);
+        ProductoE.setBounds(10, 109, 80, 30);
 
-        Edit3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Edit3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Edit3.setForeground(new java.awt.Color(255, 255, 255));
         Edit3.setText("Producto");
         PanelEditar.add(Edit3);
-        Edit3.setBounds(10, 90, 95, 22);
+        Edit3.setBounds(10, 90, 95, 17);
 
         MarcaE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,21 +347,27 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
         PanelEditar.add(MarcaE);
-        MarcaE.setBounds(10, 190, 80, 34);
+        MarcaE.setBounds(10, 179, 200, 30);
 
+        Modificar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Modificar.setForeground(new java.awt.Color(255, 255, 255));
+        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-editar-propiedad-32.png"))); // NOI18N
         Modificar.setText("Modificar");
+        Modificar.setContentAreaFilled(false);
+        Modificar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-editar-propiedad-30.png"))); // NOI18N
         Modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModificarActionPerformed(evt);
             }
         });
         PanelEditar.add(Modificar);
-        Modificar.setBounds(110, 230, 100, 27);
+        Modificar.setBounds(40, 290, 150, 42);
 
-        Edit4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Edit4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Edit4.setForeground(new java.awt.Color(255, 255, 255));
         Edit4.setText("Marca");
         PanelEditar.add(Edit4);
-        Edit4.setBounds(10, 160, 95, 22);
+        Edit4.setBounds(10, 160, 95, 17);
 
         StockE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -371,7 +380,7 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
         PanelEditar.add(StockE);
-        StockE.setBounds(10, 260, 82, 34);
+        StockE.setBounds(10, 240, 82, 30);
 
         TipoE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,27 +388,29 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
         PanelEditar.add(TipoE);
-        TipoE.setBounds(102, 40, 110, 34);
+        TipoE.setBounds(102, 40, 110, 24);
 
         PanelEditar.add(MedidaE);
-        MedidaE.setBounds(99, 120, 110, 34);
+        MedidaE.setBounds(100, 110, 110, 24);
 
+        jButton3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-eliminar-50.png"))); // NOI18N
         jButton3.setText("Cancelar");
+        jButton3.setContentAreaFilled(false);
+        jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-eliminar-filled-50.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         PanelEditar.add(jButton3);
-        jButton3.setBounds(110, 270, 100, 27);
+        jButton3.setBounds(30, 350, 160, 30);
 
-        Panel.add(PanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 130, 220, 320));
-
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setText("Generar Reporte");
-        Panel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, -1, -1));
+        Panel.add(PanelEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 130, 240, 400));
 
         Edit1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Edit1.setForeground(new java.awt.Color(255, 255, 255));
         Edit1.setText("Modificar");
         Panel.add(Edit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 90, -1, -1));
 
@@ -900,10 +911,6 @@ llenarOtro();        // TODO add your handling code here:
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }

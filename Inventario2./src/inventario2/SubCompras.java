@@ -38,8 +38,6 @@ public class SubCompras extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         Comprar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,21 +47,28 @@ public class SubCompras extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(17, 111, 172));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Comprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-50.png"))); // NOI18N
+        Comprar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Comprar.setForeground(new java.awt.Color(255, 255, 255));
+        Comprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-100.png"))); // NOI18N
+        Comprar.setText("Registrar compra");
         Comprar.setBorderPainted(false);
         Comprar.setContentAreaFilled(false);
-        Comprar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-filled-50.png"))); // NOI18N
+        Comprar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-filled-100.png"))); // NOI18N
         Comprar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComprarActionPerformed(evt);
             }
         });
-        jPanel1.add(Comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
+        jPanel1.add(Comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-caja-registradora-40.png"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-historial-de-pedidos-100.png"))); // NOI18N
+        jButton1.setText("Registro de compras");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/otra.png"))); // NOI18N
@@ -72,19 +77,13 @@ public class SubCompras extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 70, 70));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 350, 110));
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setText("Comprar");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 210, 50));
-
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel9.setText("Registro Compras");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 210, 50));
-
-        jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel11.setText("Menu Compras");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 210, 50));
+        jLabel11.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Menú Compras");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 390, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,7 +93,7 @@ public class SubCompras extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
         );
 
         pack();
@@ -108,7 +107,7 @@ public class SubCompras extends javax.swing.JFrame {
     private void ComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComprarActionPerformed
      Compras trd = new Compras();
         trd.setVisible(true); // TODO add your handling code here:
-        dispose();
+        trd.dispose();
                  
         // TODO add your handling code here:
     }//GEN-LAST:event_ComprarActionPerformed
@@ -159,8 +158,6 @@ public class SubCompras extends javax.swing.JFrame {
     private javax.swing.JButton Comprar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

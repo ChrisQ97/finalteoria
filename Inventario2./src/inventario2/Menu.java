@@ -45,16 +45,9 @@ public class Menu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         botonventa = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         botonrh = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         botonclientes = new javax.swing.JButton();
         botonprov = new javax.swing.JButton();
         botonfinanzas = new javax.swing.JButton();
@@ -67,90 +60,98 @@ public class Menu extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(189, 189, 189));
+        jPanel2.setBackground(new java.awt.Color(17, 111, 172));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenido");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 650, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 830, 30));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventarioa7.png"))); // NOI18N
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-caja-llena-100.png"))); // NOI18N
+        jButton1.setText("Inventario");
+        jButton1.setContentAreaFilled(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-caja-llena-filled-100.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 70, 70));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 250, 110));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setText("Inventario");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setText("Compras");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comprasa7.png"))); // NOI18N
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-100.png"))); // NOI18N
+        jButton2.setText("Compras");
+        jButton2.setContentAreaFilled(false);
         jButton2.setPreferredSize(new java.awt.Dimension(109, 85));
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-filled-100.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 70, 70));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 80, 250, 110));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel4.setText("Ventas");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, -1, -1));
-
-        botonventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ventasa7.png"))); // NOI18N
+        botonventa.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonventa.setForeground(new java.awt.Color(255, 255, 255));
+        botonventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-checkout-100.png"))); // NOI18N
+        botonventa.setText("Ventas");
+        botonventa.setContentAreaFilled(false);
+        botonventa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-checkout-filled-100.png"))); // NOI18N
         botonventa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonventaActionPerformed(evt);
             }
         });
-        jPanel2.add(botonventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 70, 70));
+        jPanel2.add(botonventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 80, 240, 110));
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel5.setText("Recursos Humanos");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+        botonrh.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonrh.setForeground(new java.awt.Color(255, 255, 255));
+        botonrh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-grupos-de-usuarios-100.png"))); // NOI18N
+        botonrh.setText("Recursos Humanos");
+        botonrh.setContentAreaFilled(false);
+        botonrh.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-grupos-de-usuarios-filled-100.png"))); // NOI18N
+        jPanel2.add(botonrh, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, 120));
 
-        botonrh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rh37.png"))); // NOI18N
-        jPanel2.add(botonrh, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 90, 70));
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setText("Clientes");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setText("Proveedores");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setText("Finanzas");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, -1, -1));
-
-        botonclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cli30.png"))); // NOI18N
+        botonclientes.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonclientes.setForeground(new java.awt.Color(255, 255, 255));
+        botonclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-cliente-de-empresa-100.png"))); // NOI18N
+        botonclientes.setText("Clientes");
+        botonclientes.setContentAreaFilled(false);
+        botonclientes.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-cliente-de-empresa-filled-100.png"))); // NOI18N
         botonclientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonclientesActionPerformed(evt);
             }
         });
-        jPanel2.add(botonclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 80, 80));
+        jPanel2.add(botonclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 230, 120));
 
-        botonprov.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/prov40.png"))); // NOI18N
+        botonprov.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonprov.setForeground(new java.awt.Color(255, 255, 255));
+        botonprov.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-proveedor-100.png"))); // NOI18N
+        botonprov.setText("Proveedores");
+        botonprov.setContentAreaFilled(false);
+        botonprov.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-proveedor-filled-100.png"))); // NOI18N
         botonprov.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonprovActionPerformed(evt);
             }
         });
-        jPanel2.add(botonprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 80, -1));
+        jPanel2.add(botonprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 270, -1));
 
-        botonfinanzas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fin31.png"))); // NOI18N
-        jPanel2.add(botonfinanzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 80, 80));
+        botonfinanzas.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonfinanzas.setForeground(new java.awt.Color(255, 255, 255));
+        botonfinanzas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-contabilidad-100.png"))); // NOI18N
+        botonfinanzas.setText("Finanzas");
+        botonfinanzas.setContentAreaFilled(false);
+        botonfinanzas.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-contabilidad-filled-100.png"))); // NOI18N
+        jPanel2.add(botonfinanzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 230, 120));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 310));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,9 +175,13 @@ System.exit(0);
 }
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SubCompras trd = new SubCompras();
-        trd.setVisible(true); // TODO add your handling code here:
-        dispose();
+//        SubCompras trd = new SubCompras();
+  //      trd.setVisible(true); // TODO add your handling code here:
+    //    dispose();
+    
+    submenucompras sb = new submenucompras();
+    sb.setVisible(true);
+    //dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -245,13 +250,6 @@ System.exit(0);
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

@@ -217,12 +217,15 @@ public class Ingreso extends javax.swing.JFrame {
         Factura = new rojerusan.RSTableMetro();
         Compra = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(189, 189, 189));
+        jPanel2.setBackground(new java.awt.Color(17, 111, 172));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        palenparaprov.setBackground(new java.awt.Color(62, 142, 194));
         palenparaprov.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         palenparaprov.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -231,18 +234,23 @@ public class Ingreso extends javax.swing.JFrame {
         });
         palenparaprov.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Nombre");
         palenparaprov.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 155, 72, 32));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Representante");
         palenparaprov.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 199, -1, 25));
 
+        Nombre.setForeground(new java.awt.Color(255, 255, 255));
         Nombre.setText("Nombre");
         palenparaprov.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 163, -1, -1));
 
+        Apellido.setForeground(new java.awt.Color(255, 255, 255));
         Apellido.setText("Apellido");
         palenparaprov.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 203, -1, -1));
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Nit Proveedor");
         palenparaprov.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 234, -1, 24));
 
@@ -258,6 +266,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         palenparaprov.add(Otro, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 230, 208, -1));
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Factura");
         palenparaprov.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 13, -1, -1));
 
@@ -268,6 +277,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         palenparaprov.add(Serie, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 47, 92, -1));
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Serie");
         palenparaprov.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 55, -1, -1));
 
@@ -288,14 +298,18 @@ public class Ingreso extends javax.swing.JFrame {
         });
         palenparaprov.add(Numero, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 87, 93, -1));
 
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Numero");
         palenparaprov.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 95, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Proveedor");
         palenparaprov.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 127, -1, -1));
 
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-50.png"))); // NOI18N
+        jButton2.setText("Agregar");
         jButton2.setToolTipText("Agregar Proveedor");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
@@ -305,9 +319,11 @@ public class Ingreso extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        palenparaprov.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 60, 50));
+        palenparaprov.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 150, 50));
 
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-actualizar-50.png"))); // NOI18N
+        jButton3.setText("Actualizar");
         jButton3.setToolTipText("Actualizar");
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
@@ -317,24 +333,31 @@ public class Ingreso extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        palenparaprov.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 50, 50));
+        palenparaprov.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 160, 50));
 
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Fecha");
         palenparaprov.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 13, -1, -1));
         palenparaprov.add(Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 47, 152, -1));
 
-        jPanel2.add(palenparaprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 480, 290));
+        jPanel2.add(palenparaprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 530, 290));
 
+        jPanel1.setBackground(new java.awt.Color(62, 142, 194));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        addfila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/masa10.png"))); // NOI18N
+        addfila.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        addfila.setForeground(new java.awt.Color(255, 255, 255));
+        addfila.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-más-2-matemáticas-50.png"))); // NOI18N
+        addfila.setText("Agregar");
+        addfila.setContentAreaFilled(false);
+        addfila.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-más-2-matemáticas-filled-50.png"))); // NOI18N
         addfila.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addfilaActionPerformed(evt);
             }
         });
-        jPanel1.add(addfila, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 30, 30));
+        jPanel1.add(addfila, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 160, 50));
 
         Descripcion.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -343,6 +366,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 243, 60));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Descripcion");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
@@ -358,6 +382,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Ganancia, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 98, -1));
 
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Porcentaje de ganancia");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
 
@@ -373,6 +398,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Costo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 114, -1));
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Costo/Unitario");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
@@ -395,6 +421,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 70, -1));
 
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Codigo");
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
@@ -405,9 +432,11 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 200, -1));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cantidad");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Marca");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
@@ -423,6 +452,7 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Producto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 170, -1));
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre Producto");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
@@ -434,24 +464,29 @@ public class Ingreso extends javax.swing.JFrame {
         });
         jPanel1.add(Unidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 130, -1));
 
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Unidad");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
 
         jPanel1.add(Tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 110, -1));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 450, 290));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 440, 290));
 
+        TC.setForeground(new java.awt.Color(255, 255, 255));
         TC.setText("0");
-        jPanel2.add(TC, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, 71, -1));
+        jPanel2.add(TC, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 640, 71, -1));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Total");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 630, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, -1, -1));
 
-        jLabel10.setText("Total");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 630, -1, -1));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Total Q");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 640, -1, -1));
 
+        TC1.setForeground(new java.awt.Color(255, 255, 255));
         TC1.setText("0.0");
-        jPanel2.add(TC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 630, 74, -1));
+        jPanel2.add(TC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 640, 74, -1));
 
         Factura.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -469,7 +504,9 @@ public class Ingreso extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 1070, 310));
 
-        Compra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/agregarI20.png"))); // NOI18N
+        Compra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-añadir-a-la-colección-50.png"))); // NOI18N
+        Compra.setContentAreaFilled(false);
+        Compra.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-añadir-a-la-colección-filled-50.png"))); // NOI18N
         Compra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CompraMouseClicked(evt);
@@ -485,16 +522,30 @@ public class Ingreso extends javax.swing.JFrame {
                 CompraKeyPressed(evt);
             }
         });
-        jPanel2.add(Compra, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 140, 49, 49));
+        jPanel2.add(Compra, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 70, 49, 60));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/regresara10.png"))); // NOI18N
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 220, 61, -1));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-volver-asignación-50.png"))); // NOI18N
+        jButton5.setContentAreaFilled(false);
+        jButton5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-volver-asignación-filled-50.png"))); // NOI18N
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 230, 61, 70));
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Guardar");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 50, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Regresar");
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1098, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1212,8 +1263,10 @@ Marca.requestFocus();
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

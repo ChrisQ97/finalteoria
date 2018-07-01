@@ -43,13 +43,8 @@ public class Menuvendedor extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         botonventa = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         botonclientes = new javax.swing.JButton();
         botonprov = new javax.swing.JButton();
 
@@ -64,13 +59,16 @@ public class Menuvendedor extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(17, 111, 172));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenido");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 500, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 780, 30));
 
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-caja-llena-100.png"))); // NOI18N
+        jButton1.setText("Inventario");
         jButton1.setContentAreaFilled(false);
         jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-caja-llena-filled-100.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -78,19 +76,12 @@ public class Menuvendedor extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, 110));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 250, 110));
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Inventario");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Compras");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
-
+        jButton2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-100.png"))); // NOI18N
+        jButton2.setText("Compras");
         jButton2.setContentAreaFilled(false);
         jButton2.setPreferredSize(new java.awt.Dimension(109, 85));
         jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-comprar-filled-100.png"))); // NOI18N
@@ -99,14 +90,12 @@ public class Menuvendedor extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 100, 120));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 230, 120));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Ventas");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
-
+        botonventa.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonventa.setForeground(new java.awt.Color(255, 255, 255));
         botonventa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-checkout-100.png"))); // NOI18N
+        botonventa.setText("Ventas");
         botonventa.setContentAreaFilled(false);
         botonventa.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-checkout-filled-100.png"))); // NOI18N
         botonventa.addActionListener(new java.awt.event.ActionListener() {
@@ -114,19 +103,12 @@ public class Menuvendedor extends javax.swing.JFrame {
                 botonventaActionPerformed(evt);
             }
         });
-        jPanel2.add(botonventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 100, 120));
+        jPanel2.add(botonventa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 210, 120));
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Clientes");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Proveedores");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, -1, -1));
-
+        botonclientes.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonclientes.setForeground(new java.awt.Color(255, 255, 255));
         botonclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-cliente-de-empresa-100.png"))); // NOI18N
+        botonclientes.setText("Clientes");
         botonclientes.setContentAreaFilled(false);
         botonclientes.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-cliente-de-empresa-filled-100.png"))); // NOI18N
         botonclientes.addActionListener(new java.awt.event.ActionListener() {
@@ -134,9 +116,12 @@ public class Menuvendedor extends javax.swing.JFrame {
                 botonclientesActionPerformed(evt);
             }
         });
-        jPanel2.add(botonclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 110, 110));
+        jPanel2.add(botonclientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 220, 110));
 
+        botonprov.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonprov.setForeground(new java.awt.Color(255, 255, 255));
         botonprov.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-proveedor-100.png"))); // NOI18N
+        botonprov.setText("Proveedores");
         botonprov.setContentAreaFilled(false);
         botonprov.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-proveedor-filled-100.png"))); // NOI18N
         botonprov.addActionListener(new java.awt.event.ActionListener() {
@@ -144,9 +129,9 @@ public class Menuvendedor extends javax.swing.JFrame {
                 botonprovActionPerformed(evt);
             }
         });
-        jPanel2.add(botonprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 110, 120));
+        jPanel2.add(botonprov, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 210, 270, 120));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 380));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -240,11 +225,6 @@ System.exit(0);
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

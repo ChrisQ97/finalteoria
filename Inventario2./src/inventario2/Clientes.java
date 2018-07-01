@@ -41,7 +41,7 @@ public class Clientes extends javax.swing.JFrame {
         initComponents();
         this.setDefaultCloseOperation(this.HIDE_ON_CLOSE); 
                 this.setTitle("Ingreso Cliente- Sistema Inventario BTZ");
-                this.setSize(561, 423);
+             //   this.setSize(561, 250);
                 Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();    
         this.setLocation(dim.width/4-this.getSize().width/4, dim.height/10-this.getSize().height/10);
 
@@ -74,21 +74,25 @@ public class Clientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(229, 220, 250));
+        jPanel1.setBackground(new java.awt.Color(17, 111, 172));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        botonagregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        botonagregar.setForeground(new java.awt.Color(255, 255, 255));
         botonagregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-50.png"))); // NOI18N
+        botonagregar.setText("Guardar");
+        botonagregar.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
         botonagregar.setBorderPainted(false);
         botonagregar.setContentAreaFilled(false);
-        botonagregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-filled-50(1).png"))); // NOI18N
+        botonagregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-filled-50.png"))); // NOI18N
         botonagregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonagregarActionPerformed(evt);
             }
         });
-        jPanel1.add(botonagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, -1, -1));
-        jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 314, -1));
+        jPanel1.add(botonagregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, -1, -1));
+        jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 314, -1));
 
         Nit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,51 +104,59 @@ public class Clientes extends javax.swing.JFrame {
                 NitKeyTyped(evt);
             }
         });
-        jPanel1.add(Nit, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 168, -1));
-        jPanel1.add(Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 392, -1));
+        jPanel1.add(Nit, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 168, -1));
+        jPanel1.add(Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 392, -1));
 
         Correo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 CorreoFocusLost(evt);
             }
         });
-        jPanel1.add(Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 257, -1));
+        jPanel1.add(Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 257, -1));
 
         Telefono.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 TelefonoKeyTyped(evt);
             }
         });
-        jPanel1.add(Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 191, -1));
-        jPanel1.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 314, -1));
+        jPanel1.add(Telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 191, -1));
+        jPanel1.add(Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 314, -1));
 
         correo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        correo.setForeground(new java.awt.Color(255, 255, 255));
         correo.setText("Telefóno");
-        jPanel1.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+        jPanel1.add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Datos Del Cliente");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 210, 50));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 550, 50));
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Apellido");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nit");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Dirección");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         correo1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        correo1.setForeground(new java.awt.Color(255, 255, 255));
         correo1.setText("Correo");
-        jPanel1.add(correo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+        jPanel1.add(correo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Nombre");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -154,7 +166,7 @@ public class Clientes extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
