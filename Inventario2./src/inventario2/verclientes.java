@@ -8,6 +8,7 @@ package inventario2;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,7 +34,7 @@ public class verclientes extends javax.swing.JFrame {
     Conexion con = new Conexion();
    
     Connection Consulta = con.conexion();
-    
+      Connection actualizar = con.conexion();
     /**
      * Creates new form verclientes
      */
@@ -97,6 +98,7 @@ public class verclientes extends javax.swing.JFrame {
         addcli = new javax.swing.JButton();
         actualziar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,7 +119,7 @@ public class verclientes extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tcli);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 630, 270));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 270));
 
         addcli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         addcli.setForeground(new java.awt.Color(255, 255, 255));
@@ -130,7 +132,7 @@ public class verclientes extends javax.swing.JFrame {
                 addcliActionPerformed(evt);
             }
         });
-        jPanel1.add(addcli, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 160, 50));
+        jPanel1.add(addcli, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 160, 50));
 
         actualziar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         actualziar.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,7 +145,7 @@ public class verclientes extends javax.swing.JFrame {
                 actualziarActionPerformed(evt);
             }
         });
-        jPanel1.add(actualziar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 170, 50));
+        jPanel1.add(actualziar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 170, 50));
 
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,13 +158,25 @@ public class verclientes extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-guardar-50.png"))); // NOI18N
+        jButton2.setText("Guardar cambios");
+        jButton2.setContentAreaFilled(false);
+        jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-guardar-filled-50.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,9 +196,7 @@ public class verclientes extends javax.swing.JFrame {
     private void actualziarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualziarActionPerformed
         // TODO add your handling code here:
      DefaultTableModel modelo=new DefaultTableModel(){
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return false;
-            }
+            
         };
         modelo.addColumn("Nit");
         modelo.addColumn("Nombre");
@@ -196,7 +208,7 @@ public class verclientes extends javax.swing.JFrame {
        String datos[] = new String[5];
         try {
             Statement sx = Consulta.createStatement();
-            ResultSet Ca = sx.executeQuery("SELECT Nit, Nombre, Apellido, Numero, Direccion FROM Cliente;");
+            ResultSet Ca = sx.executeQuery("SELECT Nit, NombreC, Apellido, Numero, Direccion FROM Cliente;");
             while(Ca.next()){
                 datos[0] = Ca.getString(1);
                 datos[1] = Ca.getString(2);
@@ -234,6 +246,38 @@ public class verclientes extends javax.swing.JFrame {
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        for (int i = 0; i < tcli.getRowCount(); i++) {
+                //System.out.println("Registro número: "+i);
+               // System.out.println("ID: "+TablaDatos.getValueAt(i, 0));
+               // System.out.println("NOMBRE: "+TablaDatos.getValueAt(i, 1));
+               // System.out.println("TELÉFONO: "+TablaDatos.getValueAt(i, 2));
+               String Nit = "'"+String.valueOf(tcli.getValueAt(i, 0))+"'";
+               String Nombre="'"+String.valueOf(tcli.getValueAt(i, 1))+"'";
+               String Apellido ="'"+String.valueOf(tcli.getValueAt(i, 2))+"'";
+               String Direccion = "'"+String.valueOf(tcli.getValueAt(i, 4))+"'";
+               String Telefono = String.valueOf(tcli.getValueAt(i, 3));
+               int id=i+1;
+                 try {
+                     System.out.println(Nit+Nombre+Apellido+Direccion+Telefono);
+            
+             PreparedStatement Actualizarr = actualizar.prepareStatement("UPDATE Cliente set NombreC="+Nombre+",Apellido="+Apellido+",Nit="+Nit+",Direccion="+Direccion+",Numero="+Telefono+" where Id="+id+"");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            }       
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,6 +318,7 @@ public class verclientes extends javax.swing.JFrame {
     private javax.swing.JButton actualziar;
     private javax.swing.JButton addcli;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tcli;

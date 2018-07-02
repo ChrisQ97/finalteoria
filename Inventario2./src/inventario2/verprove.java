@@ -7,6 +7,7 @@ package inventario2;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -25,6 +26,7 @@ public class verprove extends javax.swing.JFrame {
       Conexion con = new Conexion();
    
     Connection Consulta = con.conexion();
+    Connection actualizar = con.conexion();
 
 
     /**
@@ -37,9 +39,7 @@ public class verprove extends javax.swing.JFrame {
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         this.setDefaultCloseOperation(this.HIDE_ON_CLOSE); 
         DefaultTableModel modelo=new DefaultTableModel(){
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return false;
-            }
+            
         };
         this.setTitle("Proveedores - Sistema Inventario BTZ");
         modelo.addColumn("Nit");
@@ -91,6 +91,7 @@ public class verprove extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,22 +140,35 @@ public class verprove extends javax.swing.JFrame {
         jButton3.setContentAreaFilled(false);
         jButton3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-multiedición-filled-50.png"))); // NOI18N
 
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-guardar-50.png"))); // NOI18N
+        jButton4.setText("Guardar Cambios");
+        jButton4.setContentAreaFilled(false);
+        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-guardar-filled-50.png"))); // NOI18N
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addGap(35, 35, 35)
+                        .addComponent(jButton4)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,7 +179,8 @@ public class verprove extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3))
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -194,9 +209,7 @@ public class verprove extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         DefaultTableModel modelo=new DefaultTableModel(){
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return false;
-            }
+           
         };
         modelo.addColumn("Nit");
         modelo.addColumn("Nombre");
@@ -207,7 +220,7 @@ public class verprove extends javax.swing.JFrame {
         String datos[] = new String[5];
         try {
             Statement sx = Consulta.createStatement();
-            ResultSet Ca = sx.executeQuery("SELECT Nit, Nombre, Representante, Direccion, Numero FROM Proveedor;");
+            ResultSet Ca = sx.executeQuery("SELECT Nit, NombreV, Representante, Direccion, Numero FROM Proveedor;");
             while(Ca.next()){
                 datos[0] = Ca.getString(1);
                 datos[1] = Ca.getString(2);
@@ -227,6 +240,53 @@ public class verprove extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        for (int i = 0; i < tpro.getRowCount(); i++) {
+                //System.out.println("Registro número: "+i);
+               // System.out.println("ID: "+TablaDatos.getValueAt(i, 0));
+               // System.out.println("NOMBRE: "+TablaDatos.getValueAt(i, 1));
+               // System.out.println("TELÉFONO: "+TablaDatos.getValueAt(i, 2));
+               String Nit = "'"+String.valueOf(tpro.getValueAt(i, 0))+"'";
+               String Nombre="'"+String.valueOf(tpro.getValueAt(i, 1))+"'";
+               String Representante ="'"+String.valueOf(tpro.getValueAt(i, 2))+"'";
+               String Direccion = "'"+String.valueOf(tpro.getValueAt(i, 3))+"'";
+               String Telefono = String.valueOf(tpro.getValueAt(i, 4));
+               int id=i+1;
+                 try {
+                     System.out.println(Nit+Nombre+Representante+Direccion+Telefono);
+            
+             PreparedStatement Actualizarr = actualizar.prepareStatement("UPDATE Proveedor set NombreV="+Nombre+",Representante="+Representante+",Nit="+Nit+",Direccion="+Direccion+",Numero="+Telefono+" where Id="+id+"");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+        }
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,6 +327,7 @@ public class verprove extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tpro;

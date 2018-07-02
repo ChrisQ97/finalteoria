@@ -38,6 +38,7 @@ public class Ingreso extends javax.swing.JFrame {
     Connection tr = con.conexion();
     Connection res = con.conexion();
     Connection Consulta = con.conexion();
+    Connection actualizar = con.conexion();
     private String restar;
     private String nitglobal;
     private int tp=0;
@@ -559,7 +560,7 @@ public class Ingreso extends javax.swing.JFrame {
     private void CrearReg(int id,String xyz[],int idFac)
     {
        int idUsuario = 0;
-
+       actualizarinventario(xyz[6]);
         try {
             BigDecimal CostoTotal = BigDecimal.valueOf(Double.parseDouble(Costo.getText())).multiply(BigDecimal.valueOf(Double.parseDouble(Cantidad.getText()))).setScale(2, BigDecimal.ROUND_DOWN);;
            
@@ -570,6 +571,10 @@ public class Ingreso extends javax.swing.JFrame {
             CrearLot.setString(1, String.valueOf(id));
             CrearLot.setString(2,xyz[5]);
             CrearLot.setString(3, xyz[1]);
+            
+            // parece que tambien es el 6
+            
+            
             CrearLot.setString(4, xyz[6]);
             CrearLot.setString(5, xyz[7]);
             CrearLot.setString(6, xyz[8]);
@@ -599,6 +604,29 @@ public class Ingreso extends javax.swing.JFrame {
             Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    
+    private void actualizarinventario(String val){
+        
+        
+         try {
+            
+            
+             PreparedStatement Actualizarr = actualizar.prepareStatement("UPDATE cuentasbalance set saldo=saldo+"+val+"where nombre='Inventario'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+    }
+    
+    
+    
       private BigDecimal x(Double r)
     {
         return BigDecimal.valueOf(r).setScale(2, BigDecimal.ROUND_DOWN);

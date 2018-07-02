@@ -33,6 +33,7 @@ public class Compras extends javax.swing.JFrame {
     Connection Consulta = con.conexion();
     Connection Consulta2 = con.conexion();
     Connection tr = con.conexion();
+    Connection actualizar = con.conexion();
     private String nitglobal = null;
     private int tp=0;
     private int n2=0;
@@ -667,8 +668,28 @@ public class Compras extends javax.swing.JFrame {
      
    
     }
+    private void actualizarcompras(String valor){
+        
+           try {
+            
+            
+             PreparedStatement Actualizarr = actualizar.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+valor+"where nombre='(+) Compras'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
+    }
 
     private void CreaReg(int idProd, int lotegrande, String idProv,String inf[],int id) {
+        
+        actualizarcompras(inf[6]);
         try {
            
 
@@ -678,6 +699,8 @@ public class Compras extends javax.swing.JFrame {
             CrearLot.setString(1, String.valueOf(idProd));
             CrearLot.setString(2, inf[5]);
             CrearLot.setString(3, inf[1]);
+            //creo que este es el precio del de la posicion 4
+            
             CrearLot.setString(4, inf[6]);
             CrearLot.setString(5, inf[7]);
             CrearLot.setString(6, inf[8]);
