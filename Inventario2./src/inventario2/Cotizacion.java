@@ -56,7 +56,7 @@ public class Cotizacion extends javax.swing.JFrame {
         initComponents();
         Cantidad.setText("");
         
-
+this.setDefaultCloseOperation(this.HIDE_ON_CLOSE);
         AutoCompleteDecorator.decorate(Producto);
         AutoCompleteDecorator.decorate(Nit);
         this.setTitle("Cotización - Sistema Inventario BTZ");

@@ -5,6 +5,8 @@
  */
 package inventario2;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -33,6 +35,12 @@ public class Resolucion extends javax.swing.JFrame {
         Final.setText("");
         Inicio.setText("");
         NR.setText("");
+          this.setDefaultCloseOperation(this.HIDE_ON_CLOSE);
+         // setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        // this.setSize(720,310);
+
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();    
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
      
         
     }
@@ -167,6 +175,8 @@ public class Resolucion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InicioKeyTyped
 
+
+    
     private void FinalKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FinalKeyTyped
                 int k = (int) evt.getKeyChar();
         if (k >= 97 && k <= 127 || k >= 58 && k <= 97) {

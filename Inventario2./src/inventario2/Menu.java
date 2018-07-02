@@ -115,6 +115,11 @@ public class Menu extends javax.swing.JFrame {
         botonrh.setText("Recursos Humanos");
         botonrh.setContentAreaFilled(false);
         botonrh.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-grupos-de-usuarios-filled-100.png"))); // NOI18N
+        botonrh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonrhActionPerformed(evt);
+            }
+        });
         jPanel2.add(botonrh, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, 120));
 
         botonclientes.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -149,6 +154,11 @@ public class Menu extends javax.swing.JFrame {
         botonfinanzas.setText("Finanzas");
         botonfinanzas.setContentAreaFilled(false);
         botonfinanzas.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-contabilidad-filled-100.png"))); // NOI18N
+        botonfinanzas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonfinanzasActionPerformed(evt);
+            }
+        });
         jPanel2.add(botonfinanzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 230, 120));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 490));
@@ -205,6 +215,18 @@ System.exit(0);
         verprove prov = new verprove();
         prov.setVisible(true);
     }//GEN-LAST:event_botonprovActionPerformed
+
+    private void botonrhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonrhActionPerformed
+        // TODO add your handling code here:
+        rh rech= new rh();
+        rech.setVisible(true);
+    }//GEN-LAST:event_botonrhActionPerformed
+
+    private void botonfinanzasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonfinanzasActionPerformed
+        // TODO add your handling code here:
+        vfin vv = new vfin();
+        vv.setVisible(true);
+    }//GEN-LAST:event_botonfinanzasActionPerformed
 
     /**
      * @param args the command line arguments

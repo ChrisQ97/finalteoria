@@ -3,12 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/Resolucion.java</file>
-            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/SubCompras.java</file>
-            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/Registro.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/rh.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/verprove.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/planilla.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/prestamoemp.java</file>
             <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/Menu.java</file>
-            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/Compras.java</file>
-            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/submenucompras.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/resultados.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/vfin.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/pl.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/verclientes.java</file>
+            <file>file:/home/chr97lubuntu/Unido/Inventario2./src/inventario2/recuperar.java</file>
         </group>
     </open-files>
 </project-private>

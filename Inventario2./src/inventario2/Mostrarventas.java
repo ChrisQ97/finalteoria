@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package inventario2;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.ResultSet;
@@ -48,6 +50,10 @@ public class Mostrarventas extends javax.swing.JFrame {
         initComponents();
         this.setDefaultCloseOperation(this.HIDE_ON_CLOSE); 
         Todo.setSelected(true);
+        
+         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();    
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
          modeloBusqueda.addColumn("Codigo");
             modeloBusqueda.addColumn("Producto");
             modeloBusqueda.addColumn("Marca");

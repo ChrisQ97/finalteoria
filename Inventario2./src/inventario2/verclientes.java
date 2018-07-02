@@ -5,6 +5,8 @@
  */
 package inventario2;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,6 +40,9 @@ public class verclientes extends javax.swing.JFrame {
     public verclientes() {
         initComponents();
         this.setDefaultCloseOperation(this.HIDE_ON_CLOSE); 
+        
+          Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();    
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
         
         DefaultTableModel modelo=new DefaultTableModel(){
@@ -95,7 +100,8 @@ public class verclientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(189, 189, 189));
+        jPanel1.setBackground(new java.awt.Color(17, 111, 172));
+        jPanel1.setForeground(new java.awt.Color(17, 111, 172));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tcli.setModel(new javax.swing.table.DefaultTableModel(
@@ -111,31 +117,46 @@ public class verclientes extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tcli);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 630, 280));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 630, 270));
 
-        addcli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/clientead15.png"))); // NOI18N
+        addcli.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        addcli.setForeground(new java.awt.Color(255, 255, 255));
+        addcli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-50.png"))); // NOI18N
+        addcli.setText("Agregar");
+        addcli.setContentAreaFilled(false);
+        addcli.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-agregar-administrador-filled-50.png"))); // NOI18N
         addcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addcliActionPerformed(evt);
             }
         });
-        jPanel1.add(addcli, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 40, 40));
+        jPanel1.add(addcli, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 160, 50));
 
-        actualziar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actualizara17.png"))); // NOI18N
+        actualziar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        actualziar.setForeground(new java.awt.Color(255, 255, 255));
+        actualziar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-actualizar-50.png"))); // NOI18N
+        actualziar.setText("Actualizar");
+        actualziar.setContentAreaFilled(false);
+        actualziar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-actualizar-filled-50.png"))); // NOI18N
         actualziar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 actualziarActionPerformed(evt);
             }
         });
-        jPanel1.add(actualziar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 30, 40));
+        jPanel1.add(actualziar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 170, 50));
 
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-multiedición-50.png"))); // NOI18N
         jButton1.setText("Reporte");
+        jButton1.setContentAreaFilled(false);
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconoso/icons8-multiedición-filled-50.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,7 +166,7 @@ public class verclientes extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
