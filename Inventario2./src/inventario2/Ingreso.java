@@ -145,7 +145,7 @@ public class Ingreso extends javax.swing.JFrame {
             Tipo.addItem(area[i]);
         }
         
-         
+         modelo.setRowCount(0);
     }
     private String mensaje(String x)
     {
@@ -1054,6 +1054,10 @@ Marca.requestFocus();
     }//GEN-LAST:event_CompraKeyPressed
 
     private void CompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompraActionPerformed
+//>{<  modelo.removeRow(modelo.getRowCount()-1);
+  
+
+
         try
         {
             año = Fecha.getCalendar().get(Calendar.YEAR);
@@ -1102,6 +1106,29 @@ Marca.requestFocus();
                 }
             }
         }
+        
+        
+        
+             if( modelo.getRowCount()>0){
+         int i = modelo.getRowCount();
+         while(i>0){
+             modelo.removeRow(modelo.getRowCount()-1);
+             
+             i--;
+         }
+       }
+       Descripcion.setText("");
+       Ganancia.setText("");
+       Codigo.setText("");
+       Costo.setText("");
+       Cantidad.setText("");
+       Marca.setText("");
+       Numero.setText("");
+       Serie.setText("");
+       Producto.setText("");
+       
+        
+        
         // TODO add your handling code here
     }//GEN-LAST:event_CompraActionPerformed
 

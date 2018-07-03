@@ -157,7 +157,7 @@ public class Mostrarventas extends javax.swing.JFrame {
         rSTableMetro1.setFuenteHead(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jScrollPane2.setViewportView(rSTableMetro1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 980, 380));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 980, 430));
         jPanel1.add(Final, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 134, -1));
 
         Final2.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,9 +226,7 @@ public class Mostrarventas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 568, Short.MAX_VALUE)
         );
 
         pack();
@@ -561,7 +559,30 @@ public class Mostrarventas extends javax.swing.JFrame {
             Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_TodoActionPerformed
+private void GraficaProducto()
+    {
+                try {
+                    
+                  
+            
+           // Date uno=new Date(año-1900,mes-1,dia);
+           // Date dos=new Date(año2-1900,mes2-1,dia2);
+            Connection tr = con.conexion();
+            JasperReport reporte= null;
+            String path="/home/chr97lubuntu/Unido/Inventario2./src/Reportes/masvendidos.jasper";
+           // Map parametro =new HashMap();
+            reporte= (JasperReport) JRLoader.loadObjectFromFile(path);
+            JasperPrint jprint =JasperFillManager.fillReport(reporte,null,tr);
+            JasperViewer view = new JasperViewer(jprint,false);
+            view.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            view.setVisible(true);
 
+            // TODO add your handling code here:
+        } catch (JRException ex) {
+            Logger.getLogger(Clientes.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
     /**
      * @param args the command line arguments
      */

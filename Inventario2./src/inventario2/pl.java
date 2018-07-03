@@ -27,7 +27,28 @@ public class pl extends javax.swing.JFrame {
     Connection detalle = con.conexion();
     Connection prestamo = con.conexion();
      Connection cn = con.conexion();
-
+     Connection actualizarbd=con.conexion();
+     int empleadosoficina=0;
+     int impleadosventas=0;
+     
+     float sueldoventas=0;
+     float bonoiventas=0;
+     float cuotaventas=0;
+     float aguinaldoy14ventas=0;
+    // float sueldoventasP=0;
+     
+      float sueldooficina=0;
+     float bonoioficina=0;
+     float cuotaoficina=0;
+     float aguinaldoy14oficina=0;
+   //  float sueldooficinaP=0;
+     
+     
+     
+     
+     
+     
+     
     /**
      * Creates new form pl
      */
@@ -136,9 +157,180 @@ public class pl extends javax.swing.JFrame {
     private void planillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_planillaActionPerformed
         // TODO add your handling code here:
         valorusuario();
+        actualizarsueldosventas();
+        actualizarsueldosoficina();
+        actualizarbonoventas();
+        actualizarbonooficina();
+        actualizarcuotasoficina();    
+        actualizarcuotasventas();
+        aguinaldo14ventas();
+        aguinaldo14oficina();
+        
+        
+        ///
 
     }//GEN-LAST:event_planillaActionPerformed
-   private void insertardetalle(String sb, String des, String name, String lastn){
+      
+   private void actualizarsueldosventas(){
+          try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(sueldoventas)+"where nombre='Sueldos sala de ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+   }
+   private void actualizarsueldosoficina(){
+       
+        try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(sueldooficina)+"where nombre='Sueldos de administración'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+       
+   }
+   private void actualizarbonoventas(){
+       
+        try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(bonoiventas)+"where nombre='Bonificaciones incentivo sala de ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+       
+   }
+   private void actualizarbonooficina(){
+        try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(bonoioficina)+"where nombre='Bonificaciones incentivo de administración'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+   }
+   private void actualizarcuotasoficina(){
+       
+           try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(cuotaoficina)+"where nombre='Cuotas patronales de administración'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+   }
+   private void actualizarcuotasventas(){
+       
+       
+              try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(cuotaventas)+"where nombre='Cuotas patronales sala de ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+   }
+   private void aguinaldo14ventas(){
+       
+        try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(aguinaldoy14ventas)+"where nombre='Aguinaldos sala de ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(aguinaldoy14ventas)+"where nombre='Bono 14 sala de ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+                
+                     
+                     
+                     
+       
+   }
+   private void aguinaldo14oficina(){
+       
+       
+       
+       try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(aguinaldoy14oficina)+"where nombre='Aguinaldos de administración'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+String.valueOf(aguinaldoy14oficina)+"where nombre='Bono 14 de administración'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+       
+       
+       
+   }
+    
+    
+    
+    
+    
+    
+    
+    
+    private void insertardetalle(String sb, String des, String name, String lastn){
         float igss = (float) ((4.83/100)*Float.parseFloat(sb));
       try {
             PreparedStatement CrearEm = cn.prepareStatement("INSERT INTO detalleplanilla(igss,sueldobase,descuento,nombre,apellido,mes,anio) VALUES(?,?,?,?,?,?,?)");
@@ -166,10 +358,27 @@ public class pl extends javax.swing.JFrame {
         String em="0";
        try {
             Statement sx = Consulta.createStatement();
-            ResultSet Ca = sx.executeQuery("SELECT Usuario FROM empleados");
+            ResultSet Ca = sx.executeQuery("SELECT Usuario, Puesto, Sueldo FROM empleados");
             while(Ca.next()){
                 insertardetalle(valorsueldo(Ca.getString(1)),valordes(Ca.getString(1)),valorname(Ca.getString(1)),valorape(Ca.getString(1)));
                 ajustarprestamos(Ca.getString(1));
+                
+                if(Ca.getString(2).equals("Dueño")){
+                          sueldooficina=sueldooficina+Float.parseFloat(Ca.getString(3));
+                          bonoioficina+=250;
+                          cuotaoficina+=((Float.parseFloat(Ca.getString(3)))*12.67/100);
+                          aguinaldoy14oficina=sueldooficina/12;
+                         // sueldooficinaP=0;
+                }
+                else{
+                    sueldoventas+=Float.parseFloat(Ca.getString(3));
+                    bonoiventas+=250;
+                    cuotaventas+=((Float.parseFloat(Ca.getString(3)))*12.67/100);
+                    aguinaldoy14ventas=sueldoventas/12;
+                }
+                
+                
+                
             }
             
             

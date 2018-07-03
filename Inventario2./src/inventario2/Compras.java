@@ -688,8 +688,8 @@ public class Compras extends javax.swing.JFrame {
     }
 
     private void CreaReg(int idProd, int lotegrande, String idProv,String inf[],int id) {
-        
-        actualizarcompras(inf[6]);
+        float siniva=(float) ((Float.parseFloat(inf[6]))/1.12 );
+        actualizarcompras(String.valueOf(siniva));
         try {
            
 

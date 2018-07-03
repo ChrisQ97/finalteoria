@@ -23,6 +23,10 @@ public class er extends javax.swing.JFrame {
 Conexion con = new Conexion();
    
     Connection Consulta = con.conexion();
+    String ValorDevoluciones="";
+    String mercaderia=ValorMercaderias();
+    String ivacobrar=ivaporcobrar();
+    String ivapagar=ivaporpagar();
     /**
      * Creates new form er
      */
@@ -76,7 +80,7 @@ Conexion con = new Conexion();
                 datos[1] = Ca.getString(2);
                 datos[2] = "";
                 datos[3]="";
-                sumatoria+=Float.parseFloat(datos[1]);
+                
                 if(datos[0].equals("Capital")){
                    capital=activo-pasivo-gananciadespuesisr;
                    datos[1]="";
@@ -87,10 +91,32 @@ Conexion con = new Conexion();
                    datos[1]="";
                   
                 }
+                if(datos[0].equals("Mercaderías")){
+                   //datos[2]=String.valueOf(gananciadespuesisr);
+                   
+                   datos[1]=mercaderia;
+                  
+                }
+                  if(datos[0].equals("IVA por cobrar")){
+                //   datos[2]=String.valueOf(gananciadespuesisr);
+                      System.out.println("IVA POR COBRAR "+ivacobrar);
+                   datos[1]=ivacobrar;
+                  
+                }
+                      if(datos[0].equals("IVA por pagar")){
+                  // datos[2]=String.valueOf(gananciadespuesisr);
+                          System.out.println("IVA POR PAGAR "+ivapagar);
+                   datos[1]=ivapagar;
+                  
+                }
                 
-                
-                
+                if(datos[1].equals("")){
+                   datos[1]="0";
+                }
+                sumatoria+=Float.parseFloat(datos[1]);
                 modelo.addRow(datos);
+                
+                //(-) Devoluciones y rebajas sobre ventas
                 
                 if(datos[0].equals("Utiles y enseres")){
                     datos[0] = "           No corriente";
@@ -166,6 +192,86 @@ Conexion con = new Conexion();
             
             
     }
+    // String ivacobrar=ivaporcobrar();
+   // String ivapagar=ivapporpagar();
+    
+    public String ivaporcobrar() {
+        
+        
+                         float iss=0;
+    try {
+        Statement sx = Consulta.createStatement();
+        //cargo, total devengado+250,
+        ResultSet Ca = sx.executeQuery("SELECT saldo from cuentasestador where nombre='"+"(+) Compras"+"'");
+        while(Ca.next())
+            iss=Float.parseFloat(Ca.getString(1))*12/100;
+    
+    } catch (SQLException ex) {
+        Logger.getLogger(er.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    
+    
+    return String.valueOf(iss);
+    
+        
+        
+    }
+    public String ivaporpagar() {
+    
+                         float iss=0;
+    try {
+        Statement sx = Consulta.createStatement();
+        //cargo, total devengado+250,
+        ResultSet Ca = sx.executeQuery("SELECT saldo from cuentasestador where nombre='"+"Ventas"+"'");
+        while(Ca.next())
+            iss=Float.parseFloat(Ca.getString(1));
+    
+    } catch (SQLException ex) {
+        Logger.getLogger(er.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+        try {
+        Statement sx = Consulta.createStatement();
+        //cargo, total devengado+250,
+        ResultSet Cad = sx.executeQuery("SELECT saldo from cuentasestador where nombre='"+"(-) Devoluciones y rebajas sobre ventas"+"'");
+        while(Cad.next())
+            iss=iss-Float.parseFloat(Cad.getString(1));
+    
+    } catch (SQLException ex) {
+        Logger.getLogger(er.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    
+    
+    return String.valueOf(iss);
+    
+        
+        
+    }
+    
+    
+    
+    public String ValorMercaderias(){
+             float iss=0;
+    try {
+        Statement sx = Consulta.createStatement();
+        //cargo, total devengado+250,
+        ResultSet Ca = sx.executeQuery("SELECT saldo from cuentasestador where nombre='"+"(-) Mercaderias (Inventario Final)"+"'");
+        while(Ca.next())
+            iss=Float.parseFloat(Ca.getString(1));
+    
+    } catch (SQLException ex) {
+        Logger.getLogger(er.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    return String.valueOf(iss);
+    
+        
+        
+    }
+    
+    
+    
     public float valorisr(){
         float iss=0;
     try {
@@ -193,11 +299,6 @@ Conexion con = new Conexion();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        ldia = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        mes = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        anio = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         cuentas = new javax.swing.JTable();
@@ -214,29 +315,12 @@ Conexion con = new Conexion();
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 20, 790, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Balance de situación general al ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 230, -1));
-
-        ldia.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(ldia, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 30, 10));
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("de");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, -1, -1));
-
-        mes.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 110, 20));
-
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("de");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, -1, -1));
-
-        anio.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(anio, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 60, 70, 10));
+        jLabel2.setText("Balance de situación general ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 230, -1));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("(Cifras en quetzales)");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 160, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 160, -1));
 
         cuentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -303,16 +387,11 @@ Conexion con = new Conexion();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel anio;
     private javax.swing.JTable cuentas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel ldia;
-    private javax.swing.JLabel mes;
     // End of variables declaration//GEN-END:variables
 }

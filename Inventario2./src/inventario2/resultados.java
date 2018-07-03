@@ -25,14 +25,13 @@ public class resultados extends javax.swing.JFrame {
    
     Connection Consulta = con.conexion();
     Connection cn = con.conexion();
+    String Mercaderias="";
     /**
      * Creates new form resultados
      */
     public resultados() {
         initComponents();
-        dia.setText(" ");
-        mes.setText(" ");
-        anio.setText(" ");
+      
         
         
          this.setDefaultCloseOperation(this.HIDE_ON_CLOSE); 
@@ -169,6 +168,7 @@ public class resultados extends javax.swing.JFrame {
                 }
                 if(datos[0].equals("(-) Mercaderias (Inventario Final)")){
                     invfmerc=Float.parseFloat(datos[1]);
+                    Mercaderias=datos[1];
                     costodev=mercd-invfmerc;
                     datos[0] = "Costo de ventas";
                     datos[1] = String.valueOf(costodev);
@@ -240,6 +240,9 @@ public class resultados extends javax.swing.JFrame {
         ganancianetaejercicio(String.valueOf(gananciat));
         
     }
+    public String merca(){
+        return Mercaderias;
+    }
     public void ganancianetaejercicio(String gan){
          try {
 
@@ -272,11 +275,6 @@ public class resultados extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        dia = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        mes = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        anio = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         cuentas = new javax.swing.JTable();
@@ -293,32 +291,12 @@ public class resultados extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 20, 850, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Estado de resultados al");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, -1, -1));
-
-        dia.setForeground(new java.awt.Color(255, 255, 255));
-        dia.setText("jLabel3");
-        jPanel1.add(dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, -1, -1));
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("de");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
-
-        mes.setForeground(new java.awt.Color(255, 255, 255));
-        mes.setText("jLabel4");
-        jPanel1.add(mes, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 130, -1));
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("de");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, -1, -1));
-
-        anio.setForeground(new java.awt.Color(255, 255, 255));
-        anio.setText("jLabel5");
-        jPanel1.add(anio, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
+        jLabel2.setText("Estado de resultados ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("(Cifras en quetzales)");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, 180, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 180, -1));
 
         cuentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -385,16 +363,11 @@ public class resultados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel anio;
     private javax.swing.JTable cuentas;
-    private javax.swing.JLabel dia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel mes;
     // End of variables declaration//GEN-END:variables
 }

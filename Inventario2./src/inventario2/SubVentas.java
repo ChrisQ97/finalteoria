@@ -162,6 +162,7 @@ public class SubVentas extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         Resolucion nr=new Resolucion();
         nr.setVisible(true);
+        dispose();
      //dispose();
 
         // TODO add your handling code here:

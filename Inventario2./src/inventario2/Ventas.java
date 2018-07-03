@@ -34,6 +34,7 @@ public class Ventas extends javax.swing.JFrame {
     Conexion con = new Conexion();
     Connection Consulta = con.conexion();
     Connection Insertar = con.conexion();
+    Connection actualizarbd=con.conexion();
     private int año=0;
     private int mes=0;
     private int dia=0;
@@ -824,6 +825,21 @@ public class Ventas extends javax.swing.JFrame {
         }
         return 0;
     }
+    
+    private void ActualizarVenta(String valor){
+              try {
+            
+            
+             PreparedStatement Actualizarr = actualizarbd.prepareStatement("UPDATE cuentasestador set saldo=saldo+"+valor+"where nombre='Ventas'");
+                        Actualizarr.executeUpdate();
+                        Actualizarr.close();
+            
+            
+        }catch(SQLException ex){
+            Logger.getLogger(Ingreso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
 
     private void crearLotesNuevos(String idF, String ve[], String idP) {
 
@@ -844,6 +860,11 @@ public class Ventas extends javax.swing.JFrame {
                     CrearLot.setString(3, Ca.getString(3));
                     double precioTo = 0;
                     precioTo = (Double.parseDouble(ve[0])) * (Double.parseDouble(Ca.getString(3)));
+                    
+                    
+                    ///este es el precio 
+                    float siniva=(float) (precioTo/1.12);
+                    ActualizarVenta(String.valueOf(siniva));
                     CrearLot.setString(4, String.valueOf(precioTo));
                     CrearLot.setString(5, Ca.getString(5));
                     CrearLot.setString(6, idP);

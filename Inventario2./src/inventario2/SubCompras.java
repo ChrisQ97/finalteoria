@@ -47,7 +47,7 @@ public class SubCompras extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(17, 111, 172));
+        jPanel1.setBackground(new java.awt.Color(2, 136, 209));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
