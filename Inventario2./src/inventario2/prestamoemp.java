@@ -94,9 +94,13 @@ public class prestamoemp extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         nombre.setBackground(new java.awt.Color(204, 204, 204));
+        nombre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        nombre.setForeground(new java.awt.Color(255, 255, 255));
         nombre.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 240, 20));
 
+        apellido.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        apellido.setForeground(new java.awt.Color(255, 255, 255));
         apellido.setBorder(new javax.swing.border.MatteBorder(null));
         jPanel1.add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 240, 20));
 
